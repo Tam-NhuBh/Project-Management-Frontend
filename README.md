@@ -1,3 +1,6 @@
+![image](https://github.com/Tam-NhuBh/Project-Management-Website-For-Faculty-Frontend/assets/94100591/cb91b8c5-2289-4333-aad8-1d1277a1a22a)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
