@@ -21,7 +21,7 @@ function App() {
       }
       const obj = localStorage.getItem("user");
 
-      console.log("Tai khoan:",obj)
+      console.log("Account:",obj)
       const type = JSON?.parse(obj)?.role;
       switch (type) {
         case 3:
