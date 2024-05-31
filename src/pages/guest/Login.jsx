@@ -45,7 +45,7 @@ function Login() {
 
     window.onGoogleSuccess = async (response) => {
       
-      window.location.href = 'https://project-management-website-for-faculty-backend-3mij.vercel.app/auth/google';
+      window.location.href = 'http://localhost:8080/auth/google';
       //history.push('/app/homepage');
       console.log(response);
     };

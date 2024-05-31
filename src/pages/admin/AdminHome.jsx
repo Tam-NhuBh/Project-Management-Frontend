@@ -62,7 +62,7 @@ function AdminHome() {
               setIdUpdate(params.row._id);
             }}
           >
-            Chi tiết
+            Detail
           </Button>
           <Button
             variant="outlined"

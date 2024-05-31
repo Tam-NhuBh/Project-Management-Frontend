@@ -156,9 +156,7 @@ function SubTopic() {
           <Typography variant="subtitle2">
             You must update your major information before registering for a topic
           </Typography>
-          <Button variant="contained" size="small" href="/student-info">
-            Update
-          </Button>
+
         </Box>
       ) : currentPeriod ? (
         text ? (

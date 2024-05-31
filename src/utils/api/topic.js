@@ -10,7 +10,7 @@ export const deleteTopic = async (id) =>
   await request.delete("/api/topic/" + id);
 
 export const deleteTopicByManagement = async (id) =>
-  await request.delete("/api/topic/deleteByManagement/" + id);
+  await request.delete("/api/topic/deleteByManagementTopic/" + id);
 
 export const findTopic = async (id) => await request.get("/api/topic/" + id);
 
