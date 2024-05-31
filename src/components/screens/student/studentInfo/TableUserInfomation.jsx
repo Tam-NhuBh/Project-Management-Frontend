@@ -69,7 +69,7 @@ function TableUserInfomation({ user, handleUpdate }) {
             </Grid>
             <Grid container spacing={1} mt={2}>
               <Grid item xs={4}>
-                <Typography variant="subtitle2">Sex:</Typography>
+                <Typography variant="subtitle2">Gender:</Typography>
               </Grid>
               <Grid item xs={8}>
                 <Typography variant="subtitle2">

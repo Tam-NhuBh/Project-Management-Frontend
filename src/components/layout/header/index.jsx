@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../../../assets/img/logo.png"; 
 import { Box, Button, Typography, ListItemIcon, styled } from "@mui/material";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'; 
+import NotificationMenu from "../../common/NotificationMenu";
 
 const Text = styled(Typography)({
   color: "black",
@@ -70,6 +71,7 @@ function Header() {
 
            <AccountCircleIcon /> 
           <Text>{user?.email}</Text>
+          <NotificationMenu />
           <Button onClick={handleLogout}>
             <Typography fontSize={12} color={"black"} fontWeight={"bold"}>
               LOG OUT

@@ -89,7 +89,7 @@ function CreateAccount({ setList }) {
               fullWidth
               size="small"
 
-              label={isNameFocused ? "Fullname" : ""}
+              label={"Fullname" }
               value={name}
               onChange={handleNameChange}
               onFocus={() => setIsNameFocused(true)}
@@ -97,7 +97,7 @@ function CreateAccount({ setList }) {
               required
               InputProps={{
                 style: {
-                  color: isNameFocused ? "black" : "transparent",
+                  color:  "black" ,
                   transition: "color 0.3s ease",
                 },
               }}
@@ -107,7 +107,7 @@ function CreateAccount({ setList }) {
               <TextField
                 fullWidth
                 size="small"
-                label={isUsernameFocused ? "Username" : ""}
+                label={"Username"}
                 value={username}
                 onChange={handleUsernameChange}
                 onFocus={() => setIsUsernameFocused(true)}
@@ -115,7 +115,7 @@ function CreateAccount({ setList }) {
                 required
                 InputProps={{
                   style: {
-                    color: isUsernameFocused ? "black" : "transparent",
+                    color: "black",
                     transition: "color 0.3s ease",
                   },
                 }}
@@ -126,7 +126,7 @@ function CreateAccount({ setList }) {
               <TextField
                 fullWidth
                 size="small"
-                label={isFocused ? "Password" : ""}
+                label={ "Password"}
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -135,7 +135,7 @@ function CreateAccount({ setList }) {
                 required
                 InputProps={{
                   style: {
-                    color: isFocused ? "black" : "transparent",
+                    color: "black",
                     transition: "color 0.3s ease",
                   },
                 }}
@@ -147,7 +147,7 @@ function CreateAccount({ setList }) {
               <TextField
                 fullWidth
                 size="small"
-                label={isEmailFocused ? "Email" : ""}
+                label={"Email"}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 onFocus={() => setIsEmailFocused(true)}
@@ -155,7 +155,7 @@ function CreateAccount({ setList }) {
                 required
                 InputProps={{
                   style: {
-                    color: isEmailFocused ? "black" : "transparent",
+                    color:"black" ,
                     transition: "color 0.3s ease",
                   },
                 }}

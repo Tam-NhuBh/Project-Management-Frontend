@@ -54,28 +54,28 @@ function AdminHome() {
       renderCell: (params) => {
         return (
           <Box display={"flex"} gap={2} alignItems={"center"}>
-            <Button
-              variant="contained"
-              size="small"
-              onClick={() => {
-                setIsOpenModalUpdate(true);
-                setIdUpdate(params.row._id);
-              }}
-            >
-              Details
-            </Button>
-            <Button
-              variant="outlined"
-              size="small"
-              color="error"
-              onClick={(handleDelete) => {
-                setIsOpenConfirmDelete(true);
-                setIdDelete(params.row._id);
-              }}
-            >
-              Delete Topic
-            </Button>
-          </Box>
+          <Button
+            variant="contained"
+            size="small"
+            onClick={() => {
+              setIsOpenModalUpdate(true);
+              setIdUpdate(params.row._id);
+            }}
+          >
+            Chi tiết
+          </Button>
+          <Button
+            variant="outlined"
+            size="small"
+            color="error"
+            onClick={() => {
+              setIsOpenConfirmDelete(true);
+              setIdDelete(params.row._id);
+            }}
+          >
+            Delete Topic
+          </Button>
+        </Box>
         );
       },
     },
