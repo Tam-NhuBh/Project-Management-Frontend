@@ -69,6 +69,27 @@ function PeriodManagement() {
 
   const handleCreatePeriod = async (e) => {
     e.preventDefault();
+    const today = new Date();
+    const timeOpenDate = new Date(formData.timeOpen);
+    const timeCloseDate = new Date(formData.timeClose);
+
+    // Kiểm tra điều kiện thời gian
+    const threeMonthsLater = new Date(
+      today.getFullYear(),
+      today.getMonth() + 3,
+      today.getDate()
+    );
+
+    if (timeOpenDate < today) {
+      notify("error", "Open time must be today or later.");
+      return;
+    }
+
+    if (timeCloseDate < threeMonthsLater) {
+      notify("error", "Close time must be at least 3 months after open time.");
+      return;
+    }
+
     try {
       await create(formData);
       getListPeriod();
@@ -86,6 +107,8 @@ function PeriodManagement() {
   useEffect(() => {
     getListPeriod();
   }, []);
+
+  const today = new Date().toISOString().split("T")[0];
 
   return (
     <MainLayout>
@@ -136,8 +159,14 @@ function PeriodManagement() {
               fullWidth
               size="small"
               label="Open time"
-              placeholder="DD/MM/YYYY"
+              type="date"
               required
+              InputLabelProps={{
+                shrink: true,
+              }}
+              inputProps={{
+                min: today,
+              }}
               value={formData.timeOpen}
               onChange={(e) =>
                 setFormData({ ...formData, timeOpen: e.target.value })
@@ -150,8 +179,14 @@ function PeriodManagement() {
               fullWidth
               size="small"
               label="Close time"
-              placeholder="DD/MM/YYYY"
+              type="date"
               required
+              InputLabelProps={{
+                shrink: true,
+              }}
+              inputProps={{
+                min: formData.timeOpen || today,
+              }}
               value={formData.timeClose}
               onChange={(e) =>
                 setFormData({ ...formData, timeClose: e.target.value })
